@@ -10,15 +10,16 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, index) => {
   let arrDates = []
+  dates.sort();
   for(date of dates){
-    const d = new Date(date);
-    arrDates.push(d.getTime()/1000);
+    const d = Date.parse(date);
+    arrDates.push((d/1000).toString());
   }
   
   if(index == null){
     return arrDates.join("-");
   } else {
-    return arrDates[index].toString();
+    return arrDates[index];
   }
     
 };
