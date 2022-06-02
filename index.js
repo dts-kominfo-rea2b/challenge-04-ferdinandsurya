@@ -18,7 +18,7 @@ const createDate = (dates, index) => {
   if(index == null){
     return arrDates.join("-");
   } else {
-    return arrDates[index];
+    return arrDates[index].toString();
   }
     
 };
